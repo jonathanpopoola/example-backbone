@@ -1,0 +1,55 @@
+<a class="jp_backLink" href="#moviegrid">Back</a>
+<div class="jp_movieFrame">
+	<div class="jp_actualMovie">
+    <div id="clipsOptions">
+    
+    </div>
+	<video id="clipsandFeatures" width="437" height="246">
+		
+	</video>
+	</div>
+	<div id="jp_movPrev" class="jp_prevIcon"></div>
+	<div id="jp_movNext" class="jp_nextIcon"></div>
+</div>
+<ul id="jp_movieControls">
+	<li id="jp_galleryLaunch" class="jp_gallery jp_movie_roll"><a href="#">Gallery</a></li>
+	<li class="jp_features jp_movie_roll" id="moreclips"><a href="#">Features</a></li>
+    <li class="jp_trailers jp_movie_roll" id="trailersClips"><a href="#">Trailers</a></li>
+	<li id="getMovss" class="jp_getMovies jp_movie_roll"><a href="http://www.sky.com/shop/tv/movies/" target="_blank">Get Movies</a></li>
+</ul>
+<article id="jp_movieInfo">
+	<header>
+		<ul class="unstyled pull-left jp_introText">
+			<li><h3><%= movie_date %> | <%= movie_time %> | <%= movie_rating %> | <%= movie_status %></h3></li>
+			<li><h1><%= movie_name %></h1></li>
+		</ul>
+		<ul class="unstyled inline pull-right">
+			<li class="jp_recordIcon"><a href="#">Record</a></li>
+			<li class="jp_watchIcon"><a href="#">Watch</a></li>
+		</ul>
+	</header>
+	<section>
+		<p><%= movie_symptonis %></p>
+	</section>
+</article>
+
+<div id="jp_mov_gallery" class="modal hide fade">
+	<div class="modal-header">
+		<a href="#" id="jp_customClose"> <img src="img/close_button.png" /> </a>
+	</div>
+	<div id="jp_img_gallery" class="carousel slide">
+		<div class="carousel-inner">
+
+			<% _.each(galleryImages, function(image){ %>
+				<div class="item">
+		         <img src="img/<%= image.image %>" />
+		     </div>
+		    <% }) %>
+
+			
+			
+		</div>
+	</div>
+	<a class="carousel-control left jp_custom_left" href="#jp_mov_gallery" data-slide="prev"></a>
+<a class="carousel-control right jp_custom_right" href="#jp_mov_gallery" data-slide="next"></a>
+</div>

@@ -1,0 +1,17 @@
+<a class="jp_backLink" href="#moviegrid">Back</a> 
+
+<div class="menuHeader">
+	<img src="img/gallery_copy.png" />
+</div>
+
+<div class="fammHold">
+
+<% _.each(results, function(item, i) { %>
+
+	<div class="jp_familyFavElem">
+		<a href="<%= item.get("skyUrl") %>" target="_blank"><img src="img/<%= item.get("coverImg") %>" /></a>
+	</div>
+
+<% }); %> 
+
+</div>

@@ -1,0 +1,48 @@
+<a class="jp_backLink" href="#moviegrid">Back</a>
+<div class="jp_movieFrame">
+	<div class="jp_actualMovie">
+	<video width="437" height="246" id="loraxMovie" autoplay="false" preload="preload">
+		<source type="video/webm" src="http://proxy.video.sky.com/video/clip-00btucjn?type=webm&amp;resolution=medium"></source><source type="video/mp4" src="http://proxy.video.sky.com/video/clip-00btucjn?type=h264&amp;resolution=medium"></source> 
+	</video>
+	</div>
+	<div id="jp_movPrev" class="jp_prevIcon"></div>
+	<div id="jp_movNext" class="jp_nextIcon"></div>
+</div>
+<ul id="jp_movieControls">
+	<li id="jp_galleryLaunch" class="jp_gallery"><a href="#">Gallery</a></li>
+	<li class="jp_features"><a href="#">Features</a></li>
+	<li class="jp_getMovies"><a href="#">Get Movies</a></li>
+</ul>
+<article id="jp_movieInfo">
+	<header>
+		<ul class="unstyled pull-left jp_introText">
+			<li><h3><%= movie_date %> | <%= movie_time %> | <%= movie_rating %> | <%= movie_status %></h3></li>
+			<li><h1><%= movie_name %></h1></li>
+		</ul>
+		<ul class="unstyled inline pull-right">
+			<li class="jp_recordIcon"><a href="#">Record</a></li>
+			<li class="jp_watchIcon"><a href="#">Watch</a></li>
+		</ul>
+	</header>
+	<section>
+		<p><%= movie_symptonis %></p>
+	</section>
+</article>
+
+<div id="jp_mov_gallery" class="modal hide fade">
+	<div id="jp_img_gallery" class="carousel slide">
+		<div class="carousel-inner">
+			<div class="active item">
+				<img src="img/lorax_1.jpg" />
+			</div>
+			<div class="item">
+				<img src="img/lorax_2.jpg" />
+			</div>
+			<div class="item">
+				<img src="img/lorax_3.jpg" />
+			</div>
+		</div>
+	</div>
+	<a class="carousel-control left jp_custom_left" href="#jp_mov_gallery" data-slide="prev"></a>
+<a class="carousel-control right jp_custom_right" href="#jp_mov_gallery" data-slide="next"></a>
+</div>
